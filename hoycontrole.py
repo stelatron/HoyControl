@@ -17,6 +17,10 @@ from logging.handlers import TimedRotatingFileHandler
 LOGIN_URL = "https://neapi.hoymiles.com/iam/pub/0/auth/login"
 TOGGLE_URL = "https://neapi.hoymiles.com/pvm-ctl/api/0/dev/command/put"
 STATUS_URL = "https://neapi.hoymiles.com/pvm-ctl/api/0/dev/command/put_status"
+
+# "inverter_data.csv" file contains the Hoymiles user credentials in the following format 
+# (first line is a comment line)
+# example@gmail.com,Hoymiles_username,Encoded_password,DTU_id,inverter_id
 INVERTER_CSV = "inverter_data.csv"
 
 ENTSOE_TOKEN = "ADD_YOUR_TOKEN_HERE"
