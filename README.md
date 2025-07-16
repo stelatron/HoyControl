@@ -8,11 +8,11 @@ hoycontrole is a Python script that controles Hoymiles micro-inverters to switch
 - It handles exceptions to capture Ctrl+C and other uncaught exceptions 
 - It adds a price margin to the base EUR/kWh price before turning solar panels off (in function "find_current_price_block(prices))
 
-The code reads a CSV file called "inverter_data.csv" that includes the Hoymiles user credentials in the following format (first line is a comment line)
+The code reads a CSV file called "inverter_data.csv" that includes the Hoymiles user credentials in the following format (first line is a comment line)  
 
-% email, username, password, DTU_id, inverter_id
+`% email, username, password, DTU_id, inverter_id`  
 
-example@gmail.com,Hoymiles_username,Encoded_password,DTU_id,inverter_id
+`example@gmail.com,Hoymiles_username,Encoded_password,DTU_id,inverter_id`  
 
 The code also expects the user to have a token that grants access to the day-ahead electricity prices on the ENTSOE website. This can be arranged by creating an account on the transparency.entsoe.eu website and requesting restful API access.
 
