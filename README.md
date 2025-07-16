@@ -3,7 +3,7 @@ HoyControle is a Python script that controles Hoymiles micro-inverters to switch
 
 - It handles exceptions when the Hoymiles server rejects connection 
 - It checks prices only once and sleeps until the electricity price sign changes 
-- If an inverter fails it sleeps for 15 min, if all succeed it sleeps till price sign change
+- If an inverter fails to toggle, the code sleeps for 15 min, if all succeed it sleeps till price sign change
 - It creates rotating file logs (weekly, 4 backups)
 - It handles exceptions to capture Ctrl+C and other uncaught exceptions 
 - It adds a price margin to the base EUR/kWh price before turning solar panels off in function `find_current_price_block(prices)`
