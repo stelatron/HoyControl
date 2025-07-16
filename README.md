@@ -14,3 +14,4 @@ The code reads a CSV file called "inverter_data.csv" that includes the Hoymiles 
 
 The code also expects the user to have a token that grants access to the day-ahead electricity prices on the ENTSOE website. This can be arranged by creating an account on the transparency.entsoe.eu website and requesting restful API access.
 
+For questions you can contact us at stelatron@gmail.com
