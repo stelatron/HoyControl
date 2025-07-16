@@ -6,7 +6,7 @@ HoyControle is a Python script that controles Hoymiles micro-inverters to switch
 - If an inverter fails to toggle, the code sleeps for 15 min, if all succeed it sleeps till price sign change
 - It creates rotating file logs (weekly, 4 backups)
 - It handles exceptions to capture Ctrl+C and other uncaught exceptions 
-- It adds a price margin to the base EUR/kWh price before turning solar panels off in function `find_current_price_block(prices)`
+- It adds a price margin to the base EUR/kWh price in function `find_current_price_block(prices)`. This provides control over how negative the price should become before turning solar panels off 
 
 The code reads a CSV file called "inverter_data.csv" that includes the Hoymiles user credentials in the following format (first line is a comment line)  
 `% email, username, password, DTU_id, inverter_id`  
