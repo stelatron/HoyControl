@@ -1,10 +1,11 @@
 # HoyControl
-HoyControl is a Python script that controls Hoymiles micro-inverters to switch off solar panles when the day-ahead electricity price becomes negative. The code provides the following features
+HoyControl is a Python script that controls Hoymiles microinverters to switch off solar panles when the day-ahead electricity price becomes negative. The code provides the following features
 
-- It handles exceptions when the Hoymiles server rejects connection 
-- It checks prices only once and sleeps until the electricity price sign changes 
+- It checks the day-ahead prices and turns off (on) the microinverters when prices are negative (positive)
+- It minimizes web traffic by checking prices only once and sleeping until the electricity price sign changes 
 - If an inverter fails to toggle, the code sleeps for 15 min, if all succeed it sleeps till price sign change
 - It creates rotating file logs (weekly, 4 backups)
+- It handles exceptions when the Hoymiles server rejects connection 
 - It handles exceptions to capture Ctrl+C and other uncaught exceptions 
 - It adds a price margin to the base EUR/kWh price in function `find_current_price_block(prices)`. This provides control over how negative the price should become before turning solar panels off 
 
