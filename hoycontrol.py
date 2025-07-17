@@ -23,6 +23,8 @@ STATUS_URL = "https://neapi.hoymiles.com/pvm-ctl/api/0/dev/command/put_status"
 # example@gmail.com,Hoymiles_username,Encoded_password,DTU_id,inverter_id
 INVERTER_CSV = "inverter_data.csv"
 
+# Provide a token that grants access to the day-ahead electricity prices on the ENTSOE website 
+# The token can be requested by creating an account on the transparency.entsoe.eu website and requesting restful API access
 ENTSOE_TOKEN = "ADD_YOUR_TOKEN_HERE"
 ENTSOE_DOMAIN_NL = "10YNL----------L"
 
