@@ -26,7 +26,10 @@ INVERTER_CSV = "inverter_data.csv"
 # ENTSOE_TOKEN: provide a token that grants access to the day-ahead electricity prices on the ENTSOE website 
 # The token can be requested by creating an account on the transparency.entsoe.eu website and requesting restful API access
 ENTSOE_TOKEN = "ADD_YOUR_TOKEN_HERE"
-ENTSOE_DOMAIN_NL = "10YNL----------L"
+
+# ENTSOE_DOMAIN: defines the geographic region for the day-ahead electricity prices on the ENTSOE website 
+# "10YNL----------L" refers to the day-ahead electricity prices in the Netherlands 
+ENTSOE_DOMAIN = "10YNL----------L"
 
 # Logging setup: weekly rotating log, 4 backups, no console output
 logger = logging.getLogger(__name__)
@@ -76,8 +79,8 @@ def get_all_prices_for_today():
     params = {
         "securityToken": ENTSOE_TOKEN,
         "documentType": "A44",
-        "in_Domain": ENTSOE_DOMAIN_NL,
-        "out_Domain": ENTSOE_DOMAIN_NL,
+        "in_Domain": ENTSOE_DOMAIN,
+        "out_Domain": ENTSOE_DOMAIN,
         "periodStart": period_start,
         "periodEnd": period_end,
     }
